@@ -6,5 +6,7 @@ public record TestCaseRequest(
     @NotBlank String input,
     @NotBlank String expectedOutput,
     boolean sample,
-    int orderIndex
+    int orderIndex,
+    String displayInput,
+    String displayOutput
 ) {}

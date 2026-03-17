@@ -25,8 +25,11 @@ public class Question {
     @Enumerated(EnumType.STRING)
     private Difficulty difficulty;
 
-    @Column(name = "starter_code", columnDefinition = "TEXT")
-    private String starterCode;
+    @Column(name = "method_signature", columnDefinition = "TEXT")
+    private String methodSignature;
+
+    @Column(name = "driver_code", columnDefinition = "TEXT")
+    private String driverCode;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -69,8 +72,11 @@ public class Question {
     public Difficulty getDifficulty() { return difficulty; }
     public void setDifficulty(Difficulty difficulty) { this.difficulty = difficulty; }
 
-    public String getStarterCode() { return starterCode; }
-    public void setStarterCode(String starterCode) { this.starterCode = starterCode; }
+    public String getMethodSignature() { return methodSignature; }
+    public void setMethodSignature(String methodSignature) { this.methodSignature = methodSignature; }
+
+    public String getDriverCode() { return driverCode; }
+    public void setDriverCode(String driverCode) { this.driverCode = driverCode; }
 
     public LocalDateTime getCreatedAt() { return createdAt; }
     public LocalDateTime getUpdatedAt() { return updatedAt; }

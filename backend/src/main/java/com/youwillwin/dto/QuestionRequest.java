@@ -12,7 +12,8 @@ public record QuestionRequest(
     @NotBlank String title,
     @NotBlank String description,
     @NotNull Difficulty difficulty,
-    String starterCode,
+    String methodSignature,
+    String driverCode,
     Set<String> tags,
     @Valid List<TestCaseRequest> testCases
 ) {}

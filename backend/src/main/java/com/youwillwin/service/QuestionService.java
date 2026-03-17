@@ -76,7 +76,8 @@ public class QuestionService {
         question.setTitle(request.title());
         question.setDescription(request.description());
         question.setDifficulty(request.difficulty());
-        question.setStarterCode(request.starterCode());
+        question.setMethodSignature(request.methodSignature());
+        question.setDriverCode(request.driverCode());
 
         if (request.tags() != null && !request.tags().isEmpty()) {
             Set<Tag> tags = tagRepository.findByNameIn(request.tags());
@@ -90,6 +91,8 @@ public class QuestionService {
                 tc.setExpectedOutput(tcReq.expectedOutput());
                 tc.setSample(tcReq.sample());
                 tc.setOrderIndex(tcReq.orderIndex());
+                tc.setDisplayInput(tcReq.displayInput());
+                tc.setDisplayOutput(tcReq.displayOutput());
                 tc.setQuestion(question);
                 question.getTestCases().add(tc);
             }

@@ -28,6 +28,12 @@ public class TestCase {
     @Column(name = "order_index", nullable = false)
     private int orderIndex = 0;
 
+    @Column(name = "display_input", columnDefinition = "TEXT")
+    private String displayInput;
+
+    @Column(name = "display_output", columnDefinition = "TEXT")
+    private String displayOutput;
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -45,4 +51,10 @@ public class TestCase {
 
     public int getOrderIndex() { return orderIndex; }
     public void setOrderIndex(int orderIndex) { this.orderIndex = orderIndex; }
+
+    public String getDisplayInput() { return displayInput; }
+    public void setDisplayInput(String displayInput) { this.displayInput = displayInput; }
+
+    public String getDisplayOutput() { return displayOutput; }
+    public void setDisplayOutput(String displayOutput) { this.displayOutput = displayOutput; }
 }
