@@ -96,6 +96,8 @@ public class ExecutionService {
             "--network", "none",
             "--memory", MEMORY_LIMIT,
             "--cpus", "1",
+            "--stop-timeout", "5",
+            "--pids-limit", "64",
             "-v", hostPath + ":/code",
             SANDBOX_IMAGE,
             "java", "-cp", "/code", "Solution"
